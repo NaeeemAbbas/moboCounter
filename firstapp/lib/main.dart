@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
-
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("lab 1")),
         body: Center(
-          child: Text("Naeem  ", style: TextStyle(fontSize: 24)),
+          child: Text("Naeem  Abbas", style: TextStyle(fontSize: 24)),
         ),
       ),
     );
