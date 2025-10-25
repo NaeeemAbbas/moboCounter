@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("lab 1")),
         body: Center(
-          child: Text("Naeem  ", style: TextStyle(fontSize: 24)),
+          child: Text("N  ", style: TextStyle(fontSize: 24)),
         ),
       ),
     );
