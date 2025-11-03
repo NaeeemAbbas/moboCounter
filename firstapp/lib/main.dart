@@ -1,27 +1,31 @@
 import 'package:flutter/material.dart';
+import 'screens/welcome_screen.dart';
+import 'screens/profile_screen.dart';
+import 'screens/about_me_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyProfileApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyProfileApp extends StatelessWidget {
+  const MyProfileApp({super.key});
 
-  // This widget is the root of your application.
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'My Profile App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // Applying custom colors and fonts (UI Guideline)
+        primarySwatch: Colors.blue,
+        fontFamily: 'Roboto', // Replace with a custom font if you like
       ),
-      home: Scaffold(
-        appBar: AppBar(title: Text("lab 1")),
-        body: Center(
-          child: Text("sd   ", style: TextStyle(fontSize: 24)),
-        ),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const WelcomeScreen(),
+        '/profile': (context) => const ProfileScreen(),
+        '/about': (context) => const AboutMeScreen(),
+      },
     );
   }
 }
